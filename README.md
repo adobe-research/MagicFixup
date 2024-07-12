@@ -35,8 +35,17 @@ We start training from the official SD1.4 model (with the first layer modified t
 
 ### Data Processing
 The data processing code can be found under the `data_processing` folder. You can simply put all the videos in a directory, and pass the directory as the folder name in `data_processing/moments_processing.py`. If your videos are long (~ex more than 5 seconds and contain cut scenes), then you would want to use pyscenedetect to detect cut scenes and split the videos accordingly.
-For data processing, you also need to download the checkpoint for SegmentAnything, and install soft-splatting
+For data processing, you also need to download the checkpoint for SegmentAnything, and install soft-splatting. You can setup softmax-splatting and SAM, by following 
+```
+cd data_processing
+git clone https://github.com/sniklaus/softmax-splatting.git
+pip install segment_anything
+cd sam_model
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+For softmax-splatting to run, you need to install `pip install cupy` (or you might need to use `pip install cupy-cuda11x` or `pip install cupy-cuda12x` depending on your cuda version, and load the appropriate cuda module)
 
+Then run `python moments_processing.py` to start processing frames from the provided examples video (included under `data_processing/example_videos`). For the version provided, we used the [Moments in Time Dataset](http://moments.csail.mit.edu)
 
 ### Running the training script
 Make sure that you have downloaded the pretrained SD1.4 model above.  Once you download the training dataset and pretrained model, you can simply start training the model with 
@@ -45,7 +54,7 @@ Make sure that you have downloaded the pretrained SD1.4 model above.  Once you d
 ```
 The training code is in `main.py`, and relies mainly on pytorch_lightning in training.
 
-<TODO add details on how you should modify the config>
+Note that you need to modify the train and val paths in the chosen config file to the location where you have the processed data.
 
 Note: we use Deepspeed to lower the memory requirements, so the saved model weights will be sharded. The script to reconstruct the model weights will be created in the checkpoint directory with name `zero_to_fp32.py`. One bug in the file is that it wouldn't recognize files with deepspeed1 (which is the one we use), so simply find and replace the string `== 2` with the string `<= 2` and it will work.
 
