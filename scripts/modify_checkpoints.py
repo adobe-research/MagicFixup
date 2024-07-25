@@ -1,3 +1,4 @@
+# Copyright 2024 Adobe. All rights reserved.
 import torch
 pretrained_model_path='pretrained_models/sd-v1-4.ckpt'
 ckpt_file=torch.load(pretrained_model_path,map_location='cpu')

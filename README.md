@@ -64,3 +64,7 @@ To save storage requirements, we only checkpoint the learnable parameters in tra
 ```
 python combine_model_params.py --pretrained_sd <path to pretrained SD1.4 with modified first layer> --learned_params <path to combined checkpoint learned> --save_path <path to save the >
 ```
+
+
+##### Acknowledgement
+The diffusion code was built on top of the codebase adapted in [PaintByExample](https://github.com/Fantasy-Studio/Paint-by-Example)

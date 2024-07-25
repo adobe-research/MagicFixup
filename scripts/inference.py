@@ -1,3 +1,4 @@
+# Copyright 2024 Adobe. All rights reserved.
 import argparse, os, sys, glob
 # sys.path.append('.')
 import cv2

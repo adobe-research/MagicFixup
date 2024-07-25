@@ -1,3 +1,4 @@
+# Copyright 2024 Adobe. All rights reserved.
 model:
   base_learning_rate: 1.0e-05
   target: ldm.models.diffusion.ddpm.LatentDiffusion

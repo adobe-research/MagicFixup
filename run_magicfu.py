@@ -1,17 +1,12 @@
 # Copyright 2024 Adobe. All rights reserved.
 
 #%%
-import matplotlib.pyplot as plt
 import cv2
 import torch
 import numpy as np
 from omegaconf import OmegaConf
 from PIL import Image
-from tqdm import tqdm, trange
-from imwatermark import WatermarkEncoder
 from itertools import islice
-import time
-from pytorch_lightning import seed_everything
 from torch import autocast
 import torchvision
 from ldm.util import instantiate_from_config

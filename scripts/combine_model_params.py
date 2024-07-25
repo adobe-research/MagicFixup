@@ -1,3 +1,4 @@
+# Copyright 2024 Adobe. All rights reserved.
 #%%
 import matplotlib.pyplot as plt
 import cv2
