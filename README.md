@@ -1,5 +1,8 @@
 # MagicFixup
 This is the repo for the paper [Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos](https://magic-fixup.github.io)
+
+**NEW Released the User Interface!**
+
 ## Installation
 We provide an `environment.yaml` file to assist with installation. All what you need for setup is to run the following script
 ```
@@ -10,7 +13,7 @@ and this will create a conda environment that you can activate using `conda acti
 ## Inference
 
 #### Downloading Magic Fixup checkpoint
-You can download the model trained on the Moments in Time dataset using this [Google Drive Link](https://drive.google.com/file/d/1zOcDcJzCijbGr9I9adC0Cv6yzW60U9TQ/view?usp=share_link)
+You can download the model trained on the Moments in Time dataset using this [Google Drive Link](https://drive.google.com/file/d/1zOcDcJzCijbGr9I9adC0Cv6yzW60U9TQ/view?usp=share_link) or from [HuggingFace] (https://huggingface.co/HadiZayer/MagicFixup)
 
 
 ### Inference script
@@ -65,6 +68,8 @@ To save storage requirements, we only checkpoint the learnable parameters in tra
 python combine_model_params.py --pretrained_sd <path to pretrained SD1.4 with modified first layer> --learned_params <path to combined checkpoint learned> --save_path <path to save the >
 ```
 
+## Editing UI
+To help making your edits easier, we have released the our segmenting based UI. See the [UI folder](https://github.com/adobe-research/MagicFixup/tree/main/UI) for instructions on how to use it and set it up.
 
 ##### Acknowledgement
 The diffusion code was built on top of the codebase adapted in [PaintByExample](https://github.com/Fantasy-Studio/Paint-by-Example)
