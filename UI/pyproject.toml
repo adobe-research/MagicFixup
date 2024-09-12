@@ -1,0 +1,45 @@
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+  'PIL.*',
+  'pyglet.gl.*',
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "mypy>=1.6.1",
+]
+[project]
+authors = [
+  {name = "Michael Gharbi", email = "mgharbi@adobe.com"},
+]
+dependencies = [
+  "pillow<11.0.0,>=10.1.0",
+  "pysimplegui<5.0.0,>=4.60.5",
+  "tkmacosx<2.0.0,>=1.0.5",
+  "segment-anything @ git+https://github.com/facebookresearch/segment-anything.git",
+  "torch>=2.1.0",
+  "numpy>=1.25.2",
+  "torchvision>=0.16.0",
+  "setuptools>=68.2.2",
+  "nicegui>=1.4.1",
+  "scipy>=1.9.3",
+  "imageio>=2.31.5",
+  "pygame>=2.5.2",
+  "pygame-gui>=0.6.9",
+  "pyglet>=2.0.9",
+]
+description = ""
+license = {text = "MIT"}
+name = "hadi-app"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+version = "0.1.0"
+
+[project.group.dev.dependencies]
+mypy = "^1.6.1"
