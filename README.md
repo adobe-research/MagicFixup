@@ -71,5 +71,20 @@ python combine_model_params.py --pretrained_sd <path to pretrained SD1.4 with mo
 ## Editing UI
 To help making your edits easier, we have released the our segmenting based UI. See the [UI folder](https://github.com/adobe-research/MagicFixup/tree/main/UI) for instructions on how to use it and set it up.
 
+## Bibtex
+if you find our work useful, please consider citing it in your work
+
+```
+    @misc{alzayer2024magicfixup,
+      title={Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos}, 
+      author={Hadi Alzayer and Zhihao Xia and Xuaner Zhang and Eli Shechtman and Jia-Bin Huang and Michael Gharbi},
+      year={2024},
+      eprint={2403.13044},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2403.13044}, 
+    }
+```
+
 ##### Acknowledgement
 The diffusion code was built on top of the codebase adapted in [PaintByExample](https://github.com/Fantasy-Studio/Paint-by-Example)
