@@ -1,4 +1,4 @@
-# MagicFixup
+# MagicFixup (ACM Transactions on Graphics 2025)
 This is the repo for the paper [Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos](https://magic-fixup.github.io)
 
 **NEW Released the User Interface!**
@@ -75,14 +75,18 @@ To help making your edits easier, we have released the our segmenting based UI. 
 if you find our work useful, please consider citing it in your work
 
 ```
-    @misc{alzayer2024magicfixup,
-      title={Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos}, 
-      author={Hadi Alzayer and Zhihao Xia and Xuaner Zhang and Eli Shechtman and Jia-Bin Huang and Michael Gharbi},
-      year={2024},
-      eprint={2403.13044},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.13044}, 
+    @article{alzayer2025magicfixup,
+        author = {Alzayer, Hadi and Xia, Zhihao and Zhang, Xuaner (Cecilia) and Shechtman, Eli and Huang, Jia-Bin and Gharbi, Michael},
+        title = {Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos},
+        year = {2025},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        issn = {0730-0301},
+        url = {https://doi.org/10.1145/3750722},
+        doi = {10.1145/3750722},
+        journal = {ACM Trans. Graph.},
+        month = jul,
+        keywords = {Photorealistic editing, Spatial editing, Learning from videos}
     }
 ```
 
