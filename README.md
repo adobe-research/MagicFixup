@@ -1,7 +1,7 @@
 # MagicFixup (ACM Transactions on Graphics 2025)
 This is the repo for the paper [Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos](https://magic-fixup.github.io)
 
-**NEW Released the User Interface!**
+**NEW Huggingface demo!!** [Demo link](https://huggingface.co/spaces/HadiZayer/MagicFixup)
 
 ## Installation
 We provide an `environment.yaml` file to assist with installation. All what you need for setup is to run the following script
